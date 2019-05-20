@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Shopping Cart</string>
+
+
+    <string name="salads_menu">Salads menu</string>
+    <string name="shopping_cart_summery">Shopping cart summery</string>
+</resources>

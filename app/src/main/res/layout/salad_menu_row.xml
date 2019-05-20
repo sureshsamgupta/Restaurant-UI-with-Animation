@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/round_white"
+            android:elevation="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:elevation="@dimen/_5sdp">
+
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:text="Fried rice with egg and onion "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/expandableContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtName">
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/expandableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_25sdp"
+                        android:visibility="visible"
+                        app:ael_duration="700"
+                        app:ael_expanded="false"
+                        app:ael_interpolator="linear"
+                        app:ael_orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/sideMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_70sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:src="@drawable/heart"
+                                android:tint="@color/dark_grey" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/comment"
+                                android:tint="@color/dark_grey" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/arrow_small_right"
+                                android:tint="@color/dark_grey" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_toEndOf="@+id/sideMenu"
+                            android:text="The secret to the best Chinese fried is onions, garlic and sesame oil, you may add in cooked chicken, beef, pork or shrimp, also you may add in some frozen thawed peas or fresh sauteed or canned mushrooms, whatever you have handy in your fridge!"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_11sdp" />
+
+
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                </RelativeLayout>
+
+
+
+                <ImageView
+                    android:id="@+id/imgRatingStar"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_below="@+id/expandableContainer"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/rating" />
+
+                <RelativeLayout
+                    android:id="@+id/txtGramRupeeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgRatingStar"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300 g"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_11sdp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="7.50 AUD"
+                        android:textColor="@color/theme_red"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/btnPlus"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:background="@drawable/circle_white"
+            android:elevation="@dimen/_7sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_above="@+id/bottomLayout">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/add"
+                android:tint="@color/theme_red" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_below="@+id/topLayout"
+            android:orientation="vertical"></LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/round_white"
+            android:elevation="@dimen/_7sdp"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/salad" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
